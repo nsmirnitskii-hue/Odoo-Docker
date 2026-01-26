@@ -1,6 +1,7 @@
 <odoo>
 
-<record id="view_horas_form" model="ir.ui.view">
+<record 
+id="view_horas_form" model="ir.ui.view">
 <field name="name">didaktikapp.horas.form</field>
 <field name="model">didaktikapp.horas</field>
 <field name="arch" type="xml">
@@ -18,7 +19,8 @@
 </record>
 
 
-<record id="view_horas_tree" model="ir.ui.view">
+<record 
+id="view_horas_tree" model="ir.ui.view">
 <field name="name">didaktikapp.horas.tree</field>
 <field name="model">didaktikapp.horas</field>
 <field name="arch" type="xml">
@@ -32,14 +34,16 @@
 </record>
 
 
-<record id="action_horas" model="ir.actions.act_window">
+<record 
+id="action_horas" model="ir.actions.act_window">
 <field name="name">Mis horas</field>
 <field name="res_model">didaktikapp.horas</field>
 <field name="view_mode">tree,form</field>
 </record>
 
 
-<menuitem id="menu_horas"
+<menuitem 
+id="menu_horas"
 name="Horas trabajadas"
 parent="menu_didaktikapp_root"
 action="action_horas"/>
