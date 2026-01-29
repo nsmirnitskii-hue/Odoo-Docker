@@ -53,7 +53,7 @@ jobs:
             echo "$PG_PASS" > postgresql_password
             
             # Parar contenedores viejos
-            docker-compose down || true           
+            docker compose down || true           
                
             # Actualizar y arranca
-            docker-compose up -d
+            docker compose up -d
