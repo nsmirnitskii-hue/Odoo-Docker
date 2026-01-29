@@ -44,11 +44,10 @@ jobs:
           script: |
             # Crear carpeta si no existe
             mkdir Odoo-Docker
-            cd odoo
+            cd Odoo-Docker
             git init
             git remote add origin https://github.com/nsmirnitskii-hue/Odoo-Docker.git
             git pull origin main
-            cd Odoo-Docker
             
             # Usar la variable secreta para crear el archivo
             echo "$PG_PASS" > postgresql_password
