@@ -43,6 +43,9 @@ jobs:
           envs: PG_PASS
           script: |
             # Crear carpeta si no existe
+            mkdir odoo
+            cd odoo
+            git init
             git remote add origin https://github.com/nsmirnitskii-hue/Odoo-Docker.git
             git pull
             cd Odoo-Docker
