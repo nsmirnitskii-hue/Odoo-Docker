@@ -43,22 +43,14 @@ jobs:
           envs: PG_PASS
           script: |
             # Crear carpeta si no existe
-            mkdir -p Odoo-Docker
+            git pull
             cd Odoo-Docker
             
             # Usar la variable secreta para crear el archivo
             echo "$PG_PASS" > postgresql_password
             
             # Parar contenedores viejos
-            docker-compose down || true
-            
-            # Borrar imagenes viejas
-            docker system prune -f
-            
-            # Descargar el docker-compose.yml actualizado
-            #curl -O https://raw.githubusercontent.com/${{ github.repository }}/main/docker-compose.yml
-            git pull
-            
-            # Actualizar y arrancar
-            docker-compose pull
+            docker-compose down || true           
+               
+            # Actualizar y arranca
             docker-compose up -d
